@@ -6,6 +6,37 @@
 母版不包含前端、后端或其他业务代码占位目录。复制到具体项目后，应根据真实目录结构修改
 根 `AGENTS.md` 的文件所有权，以及 `.codex/agents/` 中实施角色的路径说明。
 
+## 复制范围
+
+最小配置只需要复制：
+
+- 根 `AGENTS.md`
+- 整个 `.codex/` 目录
+
+如果需要完整的 Agent 通信、任务管理和检查功能，再复制：
+
+- `coordination/`
+- `scripts/`
+- `tasks/`
+- `contracts/`
+- 相关 `docs/` 模板
+
+建议放在目标项目根目录：
+
+```text
+F:\projects\my-app\
+├─ AGENTS.md
+├─ .codex\
+│  ├─ config.toml
+│  ├─ agents\
+│  └─ rules\
+├─ coordination\
+├─ scripts\
+├─ tasks\
+├─ contracts\
+└─ 项目原有代码……
+```
+
 ## 已配置的团队
 
 - 主 Agent：需求澄清、架构决策、任务拆分、冲突处理和最终验收。
