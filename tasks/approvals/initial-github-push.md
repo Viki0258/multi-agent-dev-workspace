@@ -1,6 +1,6 @@
 # 审批请求 — 首次推送 GitHub
 
-状态：用户已批准，等待执行
+状态：已执行
 
 关联任务：initial-github-push
 
@@ -44,6 +44,7 @@
 ## 执行记录
 
 - 执行人：主 Agent
-- 实际执行内容：等待执行
-- 结果：等待执行
-- 验证：等待执行
+- 实际执行内容：执行 `git push -u origin main`，未使用 force push。
+- 结果：成功将远端 `main` 从 `40ce6b7` 更新为 `406d4ca`。
+- 验证：`git ls-remote origin refs/heads/main` 与本地 `HEAD`
+  均为 `406d4caf00908f0aec1b3713340628b6c498ec8c`。
